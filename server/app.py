@@ -93,9 +93,9 @@ def create_restaurant_pizza():
         return jsonify(restaurant_pizza.to_dict()), 201
         
     except ValueError as e:
-        return jsonify({"errors": [str(e)]}), 400
+        return jsonify({"errors": ["validation errors"]}), 400
     except Exception as e:
-        return jsonify({"errors": ["Validation error"]}), 400
+        return jsonify({"errors": ["validation errors"]}), 400
 
 
 if __name__ == "__main__":
